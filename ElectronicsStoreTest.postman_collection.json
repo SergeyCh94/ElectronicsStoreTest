@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "a0486fc5-7e6d-499e-a78f-a2107025a3aa",
+		"name": "ElectronicsStoreTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21917697"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/stores",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Магазин электроники\",\r\n  \"address\": \"ул. Примерная, 123\",\r\n  \"workingHours\": \"Пн-Пт: 9:00-18:00, Сб-Вс: выходной\",\r\n  \"contactNumber\": \"+7 (123) 456-7890\",\r\n  \"manager\": {\r\n    \"name\": \"Иван Иванов\",\r\n    \"contactDetails\": \"ivan@example.com\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/stores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stores"
+					]
+				},
+				"description": "Создание магазина:\r\n\r\nФормат запроса: POST\r\nURL: http://localhost:8080/stores\r\nBody: JSON объект с данными магазина"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/stores/3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/stores/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stores",
+						"3"
+					]
+				},
+				"description": "\r\nФормат запроса: GET\r\nURL: http://localhost:8080/stores/{id}\r\n{id} - идентификатор магазина"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/stores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/stores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stores"
+					]
+				},
+				"description": "Получение всех магазинов:\r\n\r\nФормат запроса: GET\r\nURL: http://localhost:8080/stores"
+			},
+			"response": []
+		},
+		{
+			"name": " http://localhost:8080/stores/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/stores/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stores",
+						"2"
+					]
+				},
+				"description": "Удаление магазина по идентификатору:\r\n\r\nФормат запроса: DELETE\r\nURL: http://localhost:8080/stores/{id}\r\n{id} - идентификатор магазина"
+			},
+			"response": []
+		}
+	]
+}
